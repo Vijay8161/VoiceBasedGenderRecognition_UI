@@ -61,7 +61,7 @@ function AudioUpload() {
     formData.append("file", file)
 
     try {
-      const res = await axios.post("https://voicebasedgenderrecognition-models.onrender.com/predict", formData, {
+      const res = await axios.post("https://voicebasedgenderrecognition-models.onrender.com", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       setResult(res.data)
